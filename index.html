@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - John Doe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: #2575fc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 i {
+            font-size: 1.3rem;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            min-width: 150px;
+            color: #555;
+        }
+        
+        .info-value {
+            flex: 1;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill {
+            background: #eef5ff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #2575fc;
+            font-weight: 500;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 4px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: #eef5ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2575fc;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-container">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Profile Picture" class="profile-img">
+                <h1 class="name">John Doe</h1>
+                <p class="title">Computer Science Student</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="left-column">
+                <div class="card">
+                    <h2><i class="fas fa-user"></i> Personal Information</h2>
+                    <div class="info-item">
+                        <div class="info-label">Registration No:</div>
+                        <div class="info-value">CS2023001</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Semester:</div>
+                        <div class="info-value">5th Semester</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">CGPA:</div>
+                        <div class="info-value">8.75/10.0</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Date of Birth:</div>
+                        <div class="info-value">March 15, 2002</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone:</div>
+                        <div class="info-value">+1 (555) 123-4567</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="info-item">
+                        <div class="info-label">2021 - Present</div>
+                        <div class="info-value">
+                            <strong>Bachelor of Computer Science</strong><br>
+                            University of Technology<br>
+                            Expected Graduation: 2025
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">2019 - 2021</div>
+                        <div class="info-value">
+                            <strong>High School Diploma</strong><br>
+                            Central High School<br>
+                            GPA: 3.8/4.0
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                    <div class="skills">
+                        <div class="skill">HTML/CSS</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">Java</div>
+                        <div class="skill">C++</div>
+                        <div class="skill">SQL</div>
+                        <div class="skill">React</div>
+                        <div class="skill">Node.js</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="card">
+                    <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
+                    <div class="info-item">
+                        <div class="info-value">
+                            123 University Avenue,<br>
+                            Tech City, TC 12345,<br>
+                            United States
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-briefcase"></i> Projects</h2>
+                    <div class="info-item">
+                        <div class="info-label">E-Commerce Website</div>
+                        <div class="info-value">
+                            Developed a full-stack e-commerce platform using React and Node.js with payment integration.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Task Management App</div>
+                        <div class="info-value">
+                            Created a mobile application for task management with real-time synchronization.
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Data Analysis Tool</div>
+                        <div class="info-value">
+                            Built a Python-based tool for analyzing and visualizing large datasets.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-trophy"></i> Achievements</h2>
+                    <div class="info-item">
+                        <div class="info-label">2023</div>
+                        <div class="info-value">Winner - University Hackathon</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">2022</div>
+                        <div class="info-value">Dean's List - Academic Excellence</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">2021</div>
+                        <div class="info-value">Best Project Award - Computer Science Department</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2><i class="fas fa-language"></i> Languages</h2>
+                    <div class="info-item">
+                        <div class="info-label">English</div>
+                        <div class="info-value">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Spanish</div>
+                        <div class="info-value">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">French</div>
+                        <div class="info-value">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 John Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
