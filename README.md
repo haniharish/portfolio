@@ -6,7 +6,7 @@ A modern and responsive personal portfolio website built using **React + Vite** 
 
 ## 🚀 Live Demo
 
-🔗 https://your-portfolio-link.vercel.app
+🔗https://portfolio-cdzg.vercel.app/
 
 ---
 
