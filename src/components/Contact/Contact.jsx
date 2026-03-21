@@ -1,112 +1,91 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React from "react";
 
 const Contact = () => {
-  const form = useRef();
-  const [isSent, setIsSent] = useState(false);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_axbtt7a",  // Replace with your EmailJS Service ID
-        "template_1ziboq3",  // Replace with your EmailJS Template ID
-        form.current,
-        "Rz7W9pVF0HdDryNNL"  // Replace with your EmailJS Public Key
-      )
-      .then(
-        () => {
-          setIsSent(true);
-          form.current.reset(); // Reset form fields after sending
-          toast.success("Message sent successfully! ✅", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        }
-      );
-  };
-
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className="py-24 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans"
     >
-      {/* Toast Container */}
-      <ToastContainer />
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-text dark:text-white tracking-tight">
+            CONTACT
+          </h2>
+          <div className="w-32 h-1 bg-accent mx-auto mt-4"></div>
+          <p className="text-muted dark:text-gray-300 mt-5 text-lg md:text-xl font-semibold">
+            Let’s collaborate on something meaningful. Reach out for roles, internships, or projects.
+          </p>
+        </div>
 
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          I’d love to hear from you—reach out for any opportunities or questions!
-        </p>
-      </div>
+        {/* Only Left Section (Contact Info) */}
+        <div className="max-w-2xl mx-auto space-y-6">
+          <div className="rounded-2xl bg-card dark:bg-slate-950/70 border border-border dark:border-white/10 p-6 shadow-[0_18px_45px_rgba(15,23,42,0.09)]">
+            <h3 className="text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-muted dark:text-gray-400 mb-5">
+              Direct Contact
+            </h3>
 
-      {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
-          Connect With Me <span className="ml-1">🚀</span>
-        </h3>
+            <div className="space-y-4 text-sm md:text-base">
+              <div className="flex items-center justify-between border-b border-border/60 dark:border-slate-800 pb-3">
+                <div>
+                  <p className="text-[11px] md:text-xs font-medium text-muted dark:text-gray-400">Email</p>
+                  <a
+                    href="mailto:harishhani2004@gmail.com"
+                    className="text-text dark:text-white font-semibold hover:text-accent transition"
+                  >
+                    harishhani2004@gmail.com
+                  </a>
+                </div>
+                <span className="px-2 py-1 rounded-full bg-emerald-50 text-emerald-600 text-[11px] font-medium dark:bg-emerald-500/10 dark:text-emerald-300">
+                  Preferred
+                </span>
+              </div>
 
-        <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          <textarea
-            name="message"
-            placeholder="Message"
-            rows="4"
-            required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
-          />
-          
-          {/* Send Button */}
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
-          >
-            Send
-          </button>
-        </form>
+              <div className="flex items-center justify-between border-b border-border/60 dark:border-slate-800 pb-3">
+                <div>
+                  <p className="text-[11px] md:text-xs font-medium text-muted dark:text-gray-400">GitHub</p>
+                  <a
+                    href="https://github.com/haniharish"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-text dark:text-white font-semibold hover:text-accent transition"
+                  >
+                    github.com/haniharish
+                  </a>
+                </div>
+                <span className="px-2 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-medium dark:bg-slate-800/60 dark:text-gray-200">
+                  Code
+                </span>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-[11px] md:text-xs font-medium text-muted dark:text-gray-400">LinkedIn</p>
+                  <a
+                    href="https://www.linkedin.com/in/harishsharma12"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-text dark:text-white font-semibold hover:text-accent transition"
+                  >
+                    linkedin.com/in/harishsharma12
+                  </a>
+                </div>
+                <span className="px-2 py-1 rounded-full bg-rose-50 text-rose-600 text-[11px] font-medium dark:bg-rose-500/10 dark:text-rose-300">
+                  Network
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 dark:bg-slate-950/60 px-5 py-4 text-sm md:text-base text-muted dark:text-gray-300">
+            <p className="font-semibold text-text dark:text-white mb-2">
+              Response time
+            </p>
+            <p>
+              I usually reply within <span className="font-semibold text-accent">24 hours</span>.
+              Share a brief about your project, role, or idea so I can come prepared.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

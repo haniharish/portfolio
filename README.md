@@ -1,59 +1,93 @@
-# 🌐 Animated Portfolio Website
+# 💼 Harish Portfolio
 
-A sleek, responsive, and fully customizable **animated portfolio website** built using **React.js** and **Tailwind CSS**. This project gained **85K+ views** on [YouTube]([https://youtube.com/your-video-link](https://youtu.be/ypSc8HEurGQ?si=yI3GJCye3sAKoemW)) – loved by developers and students for its modern design and clean code.
+A modern and responsive personal portfolio website built using **React + Vite** to showcase my projects, skills, and experience.
+
+---
 
 ## 🚀 Live Demo
 
-🔗 [View Portfolio Live](https://tarunkaushik.vercel.app/)
+🔗 https://your-portfolio-link.vercel.app
+
+---
 
 ## 🛠️ Tech Stack
 
-- ⚛️ React.js
-- 🎨 Tailwind CSS
-- 💾 Vercel(for deployment)
+* ⚛️ React.js
+* ⚡ Vite
+* 🎨 Tailwind CSS
+* 📜 JavaScript (ES6+)
 
-## 📁 Features
+---
 
-- Responsive design for all screen sizes 📱💻
-- Smooth scroll and animation effects ✨
-- Clean and modular React components 🧩
-- Easy to customize with Tailwind utility classes 🎯
-- Professional sections: About, Skills, Projects, Contact, etc. 👨‍💻
+## ✨ Features
 
+* 👤 Personal introduction section
+* 💻 Projects showcase
+* 🧠 Skills section
+* 📄 Resume download option
+* 📱 Fully responsive design
+* 📬 Contact section
 
-## 🧑‍💻 How to Use
+---
 
-### 1. Clone the Repo
+## 📂 Project Structure
 
-```bash
-git clone [https://github.com/codingmastr/Tarun-s-Portfolio.git]
-cd your-repo-name
-````
+```
+Harish-s-Portfolio/
+│── public/          # Static assets
+│── src/             # Main source code
+│   ├── assets/      # Images & icons
+│   ├── components/  # Reusable components
+│   ├── pages/       # Sections (Home, About, Projects, Contact)
+│   └── App.jsx
+│── index.html
+│── package.json
+│── vite.config.js
+```
 
-### 2. Install Dependencies
+---
 
-```bash
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```
+git clone https://github.com/your-username/harish-portfolio.git
+cd harish-portfolio
+```
+
+Install dependencies:
+
+```
 npm install
 ```
 
-### 3. Run the App
+Run the development server:
 
-```bash
-npm start
+```
+npm run dev
 ```
 
-### 4. Build for Production
+---
 
-```bash
+## 📦 Build for Production
+
+```
 npm run build
 ```
 
-## 📹 YouTube Tutorial
+---
 
-Watch the full build on YouTube:
-📺 [React Portfolio Website - 85K+ Views](https://youtu.be/ypSc8HEurGQ?si=winjJhc9qzNrCqLD)
+## 🌐 Deployment
 
-## 🌟 Credits
+This project is deployed using **Vercel**.
 
-This project was created with ❤️ by [Tarun Kaushik](https://tarunkaushik.vercel.app/).
-If you like it, feel free to ⭐ this repository and share!
+Steps:
+
+1. Push code to GitHub
+2. Import repository in Vercel
+3. Click **Deploy**
+
+---
+
+## 📸 Scree
