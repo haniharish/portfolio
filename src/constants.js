@@ -9,7 +9,7 @@ import reduxLogo from './assets/tech_logo/redux.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
 import MVC from './assets/tech_logo/MVC.jpg';
 import JWT from './assets/tech_logo/JWT.jpg';
-import LINUX from './assets/tech_logo/LINUX.PNG';
+import LINUX from './assets/tech_logo/LINUX.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
 import gsapLogo from './assets/tech_logo/gsap.png';
 import materialuiLogo from './assets/tech_logo/materialui.png';
